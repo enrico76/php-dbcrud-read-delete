@@ -17,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js" charset="utf-8"></script>
     <!-- TEMPLATE: MESSAGE MENU -->
     <script id="item-template" type="text/x-handlebars-template">
+
     </script>
 
     <!-- CSS: MY STYLE -->
@@ -28,6 +29,37 @@
     <title>php-dbcrud-read-delete</title>
   </head>
   <body>
+    <div class="container">
+      <h2>REJECTED</h2>
+      <div class="pagamenti" id="rejected">
+        <ul></ul>
 
+      </div>
+
+    </div>
+    <div class="container">
+      <h2>PENDING</h2>
+      <div class="pagamenti" id="pending">
+        <ul></ul>
+
+      </div>
+
+    </div>
+    <div class="container">
+      <h2>ACCEPTED</h2>
+      <div class="pagamenti" id="accepted">
+        <ul></ul>
+
+      </div>
+
+    </div>
+    <li class="item_pagamento" data-id={{id}}>
+      id prenotazione: {{prenotazione_id}}
+      id pagante: {{pagante_id}}
+      somma: {{price}}
+
+      <button class="bt-del" type="button" name="button"></button>
+
+    </li>
   </body>
 </html>
