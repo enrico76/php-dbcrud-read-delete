@@ -13,20 +13,20 @@ if ($conn -> connect_error) {
   var_dump($conn);
   die();
 }
-
-$id = $_GET['id'];
+$price = $_GET['price'];
+$status = $_GET['status'];
 
 $query = "
-DELETE FROM pagamenti
-WHERE id = " . $id ."
+  INSERT INTO pagamenti (status, price, prenotazione_id, pagante_id)
+  VALUES
+    ('". $status . "'," . $price . ", 1, 1)
+
 ";
 
 $res = $conn -> query($query);
 $conn -> close();
 
 echo json_encode($res);
-
-
 
 
 

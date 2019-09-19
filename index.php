@@ -17,7 +17,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js" charset="utf-8"></script>
     <!-- TEMPLATE: MESSAGE MENU -->
     <script id="item-template" type="text/x-handlebars-template">
+      <div class="box" data-id={{id}}>
+        <p>{{price}}</p>
+        <h4 class="delete">DELETE ME</h4>
+        <h4 class="update">AGGIORNA IL PREZZO</h4>
 
+
+
+
+      </div>
     </script>
 
     <!-- CSS: MY STYLE -->
@@ -30,36 +38,16 @@
   </head>
   <body>
     <div class="container">
-      <h2>REJECTED</h2>
-      <div class="pagamenti" id="rejected">
-        <ul></ul>
 
+      <h2>PENDING <span class="add pending">+</span></h2>
+      <div class="wrapper pending">
+        </div>
+      <h2>REJECTED <span class="add rejected">+</span></h2>
+      <div class="wrapper rejected">
       </div>
-
-    </div>
-    <div class="container">
-      <h2>PENDING</h2>
-      <div class="pagamenti" id="pending">
-        <ul></ul>
-
+      <h2>ACCEPTED <span class="add accepted">+</span></h2>
+      <div class="wrapper accepted">
       </div>
-
     </div>
-    <div class="container">
-      <h2>ACCEPTED</h2>
-      <div class="pagamenti" id="accepted">
-        <ul></ul>
-
-      </div>
-
-    </div>
-    <li class="item_pagamento" data-id={{id}}>
-      id prenotazione: {{prenotazione_id}}
-      id pagante: {{pagante_id}}
-      somma: {{price}}
-
-      <button class="bt-del" type="button" name="button"></button>
-
-    </li>
   </body>
 </html>
